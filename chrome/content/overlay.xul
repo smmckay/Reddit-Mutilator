@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://redditmutilator/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://redditmutilator/locale/overlay.dtd">
+<overlay id="redditmutilator-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script src="overlay.js"/>
+
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="redditmutilator-strings" src="chrome://redditmutilator/locale/overlay.properties"/>
+  </stringbundleset>
+  <popup id="contentAreaContextMenu">
+    <menuitem id="context-redditmutilator-blockuser"
+              label="&redditmutilatorBlockuserContext.label;"
+              accessKey="&redditmutilatorBlockuserContext.accesskey;"
+              oncommand="redditmutilator.onContextBlockItem('blockusers')"/>
+    <menuitem id="context-redditmutilator-blockdomain"
+              label="&redditmutilatorBlockdomainContext.label;"
+              accessKey="&redditmutilatorBlockdomainContext.accesskey;"
+              oncommand="redditmutilator.onContextBlockItem('blockdomains')"/>
+  </popup>
+</overlay>

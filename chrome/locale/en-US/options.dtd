@@ -1,0 +1,8 @@
+<!ENTITY prefwindow.title "Reddit Mutilator preferences">
+<!ENTITY pane1.title "Reddit Mutilator preferences">
+<!ENTITY blocknsfw.label "Block NSFW">
+<!ENTITY blocknsfw.accesskey "B">
+<!ENTITY blockusers.label "Block Users (separated by semicolons)">
+<!ENTITY blockusers.accesskey "U">
+<!ENTITY blockdomains.label "Block Domains (separated by semicolons)">
+<!ENTITY blockdomains.accesskey "D">

@@ -1,0 +1,6 @@
+content   redditmutilator                 chrome/content/
+skin      redditmutilator   classic/1.0   chrome/skin/
+locale    redditmutilator   en-US         chrome/locale/en-US/
+
+
+overlay   chrome://browser/content/browser.xul   chrome://redditmutilator/content/overlay.xul

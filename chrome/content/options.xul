@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE prefwindow SYSTEM "chrome://redditmutilator/locale/options.dtd">
+<prefwindow id="redditmutilator-preferences" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" title="&prefwindow.title;">
+  <prefpane id="pane1" label="&pane1.title;">
+    <preferences>
+      <preference id="blocknsfwpref" name="extensions.redditmutilator.blocknsfw" type="bool"/>
+      <preference id="blockuserspref" name="extensions.redditmutilator.blockusers" type="unichar"/>
+      <preference id="blockdomainspref" name="extensions.redditmutilator.blockdomains" type="unichar"/>
+    </preferences>
+    <checkbox id="blocknsfwbox" preference="blocknsfwpref" label="&blocknsfw.label;" accesskey="&blocknsfw.accesskey;"/>
+    <label accesskey="&blockusers.accesskey;" control="blockusersbox">&blockusers.label;</label><textbox id="blockusersbox" preference="blockuserspref"/>
+    <label accesskey="&blockdomains.accesskey;" control="blockdomainsbox">&blockdomains.label;</label><textbox id="blockdomainsbox" preference="blockdomainspref"/>
+  </prefpane>
+</prefwindow>
