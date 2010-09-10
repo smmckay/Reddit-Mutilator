@@ -7,9 +7,24 @@
       <preference id="blocknsfwpref" name="extensions.redditmutilator.blocknsfw" type="bool"/>
       <preference id="blockuserspref" name="extensions.redditmutilator.blockusers" type="unichar"/>
       <preference id="blockdomainspref" name="extensions.redditmutilator.blockdomains" type="unichar"/>
+      <preference id="hidesharepref" name="extensions.redditmutilator.hideshare" type="bool"/>
+      <preference id="hidesavepref" name="extensions.redditmutilator.hidesave" type="bool"/>
+      <preference id="hidehidepref" name="extensions.redditmutilator.hidehide" type="bool"/>
+      <preference id="hidereportpref" name="extensions.redditmutilator.hidereport" type="bool"/>
+      <preference id="hidecreateboxpref" name="extensions.redditmutilator.hidecreatebox" type="bool"/>
+      <preference id="hidesubmitboxpref" name="extensions.redditmutilator.hidesubmitbox" type="bool"/>
     </preferences>
     <checkbox id="blocknsfwbox" preference="blocknsfwpref" label="&blocknsfw.label;" accesskey="&blocknsfw.accesskey;"/>
     <label accesskey="&blockusers.accesskey;" control="blockusersbox">&blockusers.label;</label><textbox id="blockusersbox" preference="blockuserspref"/>
     <label accesskey="&blockdomains.accesskey;" control="blockdomainsbox">&blockdomains.label;</label><textbox id="blockdomainsbox" preference="blockdomainspref"/>
+    <groupbox>
+        <caption label="&hidegroupbox.label;" />
+        <checkbox id="hidesharebox" preference="hidesharepref" label="&hideshare.label;" />
+        <checkbox id="hidesavebox" preference="hidesavepref" label="&hidesave.label;" />
+        <checkbox id="hidehidebox" preference="hidehidepref" label="&hidehide.label;" />
+        <checkbox id="hidereportbox" preference="hidereportpref" label="&hidereport.label;" />
+        <checkbox id="hidecreateboxbox" preference="hidecreateboxpref" label="&hidecreatebox.label;" />
+        <checkbox id="hidesubmitboxbox" preference="hidesubmitboxpref" label="&hidesubmitbox.label;" />
+    </groupbox>
   </prefpane>
 </prefwindow>

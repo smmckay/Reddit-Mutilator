@@ -6,3 +6,10 @@
 <!ENTITY blockusers.accesskey "U">
 <!ENTITY blockdomains.label "Block Domains (separated by semicolons)">
 <!ENTITY blockdomains.accesskey "D">
+<!ENTITY hidegroupbox.label "Hide:">
+<!ENTITY hideshare.label "&quot;share&quot; link">
+<!ENTITY hidesave.label "&quot;save&quot; link">
+<!ENTITY hidehide.label "&quot;hide&quot; link">
+<!ENTITY hidereport.label "&quot;report&quot; link">
+<!ENTITY hidecreatebox.label "&quot;Create your own community&quot; box">
+<!ENTITY hidesubmitbox.label "&quot;Submit a link&quot; box">
