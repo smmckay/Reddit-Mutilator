@@ -8,9 +8,15 @@ var redditmutilator = {
     this.prefs       = Components.classes["@mozilla.org/preferences-service;1"]
                                  .getService(Components.interfaces.nsIPrefService)
                                  .getBranch("extensions.redditmutilator.");
-    this.boolprefs   = ["blocknsfw"];
+    this.boolprefs   = ["blocknsfw",
+                        "hideshare",
+                        "hidesave",
+                        "hidehide",
+                        "hidereport",
+                        "hidecreatebox",
+                        "hidesubmitbox"];
     this.listprefs   = ["blockusers", "blockdomains"];
-    this.url_regex   = new RegExp("^http://www.reddit.com(/r/[^/]+)?/[^/]*$");
+    this.url_regex   = new RegExp("^http://www.reddit.com(/r/[^/]+)?[^/]*$");
 
     document.getElementById("contentAreaContextMenu")
             .addEventListener("popupshowing", redditmutilator.showContextMenu, false);
@@ -97,11 +103,15 @@ var redditmutilator = {
       return context.evaluate(query, context, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null);
   },
 
+  hideElements: function(doc, query) {
+      var elements = this.xpath(doc, query);
+      for(var i = 0; i < elements.snapshotLength; i++) {
+          elements.snapshotItem(i).style.display = "none";
+      }
+  },
+
   blocknsfw: function(doc) {
-    var nsfw_links = this.xpath(doc, '//div[contains(@class,"over18")]');
-    for(var i = 0; i < nsfw_links.snapshotLength; i++) {
-        nsfw_links.snapshotItem(i).style.display = "none";
-    }
+    this.hideElements(doc, '//div[contains(@class,"over18")]');
   },
 
   blockdomains: function(doc, domains) {
@@ -133,6 +143,30 @@ var redditmutilator = {
               }
           }
       }
+  },
+
+  hideshare: function(doc) {
+      this.hideElements(doc, '//span[contains(@class,"share-button")]');
+  },
+
+  hidesave: function(doc) {
+      this.hideElements(doc, '//form[contains(@class,"save-button")]');
+  },
+
+  hidehide: function(doc) {
+      this.hideElements(doc, '//form[contains(@class,"hide-button")]');
+  },
+
+  hidereport: function(doc) {
+      this.hideElements(doc, '//form[contains(@class,"report-button")]');
+  },
+
+  hidecreatebox: function(doc) {
+      this.hideElements(doc, '//div[@class="sidebox create"]');
+  },
+
+  hidesubmitbox: function(doc) {
+      this.hideElements(doc, '//div[@class="sidebox submit"]');
   }
 };
 
