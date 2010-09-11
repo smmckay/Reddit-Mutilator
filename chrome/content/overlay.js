@@ -14,7 +14,9 @@ var redditmutilator = {
                         "hidehide",
                         "hidereport",
                         "hidecreatebox",
-                        "hidesubmitbox"];
+                        "hidesubmitbox",
+                        "hidemodbox",
+                        "hiderecentbox"];
     this.listprefs   = ["blockusers", "blockdomains"];
     this.url_regex   = new RegExp("^http://www.reddit.com(/+r/+[^/]+)?/*[^/]*$");
 
@@ -167,6 +169,14 @@ var redditmutilator = {
 
   hidesubmitbox: function(doc) {
       this.hideElements(doc, '//div[@class="sidebox submit"]');
+  },
+
+  hidemodbox: function(doc) {
+      this.hideElements(doc, '//h1[text()="' + strings.getString("modBoxText") + '"]/..');
+  },
+
+  hiderecentbox: function(doc) {
+      this.hideElements(doc, '//h1[text()="' + strings.getString("recentBoxText") + '"]/..');
   }
 };
 

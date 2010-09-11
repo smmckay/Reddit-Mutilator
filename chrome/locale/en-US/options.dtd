@@ -13,3 +13,5 @@
 <!ENTITY hidereport.label "&quot;report&quot; link">
 <!ENTITY hidecreatebox.label "&quot;Create your own community&quot; box">
 <!ENTITY hidesubmitbox.label "&quot;Submit a link&quot; box">
+<!ENTITY hidemodbox.label "MODERATORS box">
+<!ENTITY hiderecentbox.label "RECENTLY VIEWED LINKS box">
