@@ -16,7 +16,7 @@ var redditmutilator = {
                         "hidecreatebox",
                         "hidesubmitbox"];
     this.listprefs   = ["blockusers", "blockdomains"];
-    this.url_regex   = new RegExp("^http://www.reddit.com(/r/[^/]+)?/?[^/]*$");
+    this.url_regex   = new RegExp("^http://www.reddit.com(/+r/+[^/]+)?/*[^/]*$");
 
     document.getElementById("contentAreaContextMenu")
             .addEventListener("popupshowing", redditmutilator.showContextMenu, false);
