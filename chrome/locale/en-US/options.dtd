@@ -16,3 +16,4 @@
 <!ENTITY hidemodbox.label "MODERATORS box">
 <!ENTITY hiderecentbox.label "RECENTLY VIEWED LINKS box">
 <!ENTITY hidesubredditbar.label "Subreddit bar">
+<!ENTITY hidesearchbox.label "Search box">
