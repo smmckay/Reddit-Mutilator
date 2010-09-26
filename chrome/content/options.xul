@@ -2,6 +2,7 @@
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
 <!DOCTYPE prefwindow SYSTEM "chrome://redditmutilator/locale/options.dtd">
 <prefwindow id="redditmutilator-preferences" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" title="&prefwindow.title;">
+  <script src="options.js"/>
   <prefpane id="pane1" label="&pane1.title;">
     <preferences>
       <preference id="blocknsfwpref" name="extensions.redditmutilator.blocknsfw" type="bool"/>
@@ -17,17 +18,24 @@
       <preference id="hiderecentboxpref" name="extensions.redditmutilator.hiderecentbox" type="bool"/>
       <preference id="hidesubredditbarpref" name="extensions.redditmutilator.hidesubredditbar" type="bool"/>
       <preference id="hidesearchboxpref" name="extensions.redditmutilator.hidesearchbox" type="bool"/>
+      <preference id="userunitypref" name="extensions.redditmutilator.userunity" type="bool"/>
+      <preference id="blockcommentuserspref" name="extensions.redditmutilator.blockcommentusers" type="unichar"/>
+      <preference id="hideinfoboxpref" name="extensions.redditmutilator.hideinfobox" type="bool"/>
     </preferences>
     <tabbox id="optionTabs" selectedIndex="0">
       <tabs>
-        <tab label="Link pages"/>
-        <tab label="Comment pages"/>
+        <tab label="Content blocking"/>
+        <tab label="Element removal"/>
       </tabs>
       <tabpanels>
         <vbox>
           <checkbox id="blocknsfwbox" preference="blocknsfwpref" label="&blocknsfw.label;" accesskey="&blocknsfw.accesskey;"/>
           <label accesskey="&blockusers.accesskey;" control="blockusersbox">&blockusers.label;</label><textbox id="blockusersbox" preference="blockuserspref"/>
           <label accesskey="&blockdomains.accesskey;" control="blockdomainsbox">&blockdomains.label;</label><textbox id="blockdomainsbox" preference="blockdomainspref"/>
+          <checkbox id="userunitybox" preference="userunitypref" label="&userunity.label;"/>
+          <label control="blockcommentusersbox">&blockcommentusers.label;</label><textbox id="blockcommentusersbox" preference="blockcommentuserspref"/>
+        </vbox>
+        <vbox>
           <groupbox>
             <caption label="&hidegroupbox.label;" />
             <checkbox id="hidesharebox" preference="hidesharepref" label="&hideshare.label;" />
@@ -40,9 +48,8 @@
             <checkbox id="hiderecentboxbox" preference="hiderecentboxpref" label="&hiderecentbox.label;" />
             <checkbox id="hidesubredditbarbox" preference="hidesubredditbarpref" label="&hidesubredditbar.label;" />
             <checkbox id="hidesearchboxbox" preference="hidesearchboxpref" label="&hidesearchbox.label;" />
+            <checkbox id="hideinfoboxbox" preference="hideinfoboxpref" label="&hideinfobox.label;" />
           </groupbox>
-        </vbox>
-        <vbox>
         </vbox>
       </tabpanels>
     </tabbox>

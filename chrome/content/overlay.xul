@@ -11,10 +11,14 @@
     <menuitem id="context-redditmutilator-blockuser"
               label="&redditmutilatorBlockuserContext.label;"
               accessKey="&redditmutilatorBlockuserContext.accesskey;"
-              oncommand="redditmutilator.onContextBlockItem('blockusers')"/>
+              oncommand="redditmutilator.onLinksContextBlockItem('blockusers')"/>
     <menuitem id="context-redditmutilator-blockdomain"
               label="&redditmutilatorBlockdomainContext.label;"
               accessKey="&redditmutilatorBlockdomainContext.accesskey;"
-              oncommand="redditmutilator.onContextBlockItem('blockdomains')"/>
+              oncommand="redditmutilator.onLinksContextBlockItem('blockdomains')"/>
+    <menuitem id="context-redditmutilator-blockcommentuser"
+              label="&redditmutilatorBlockuserContext.label;"
+              accessKey="&redditmutilatorBlockuserContext.accesskey;"
+              oncommand="redditmutilator.onCommentContextBlockUser()"/>
   </popup>
 </overlay>

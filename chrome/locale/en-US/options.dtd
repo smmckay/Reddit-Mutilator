@@ -2,7 +2,7 @@
 <!ENTITY pane1.title "Reddit Mutilator preferences">
 <!ENTITY blocknsfw.label "Block NSFW">
 <!ENTITY blocknsfw.accesskey "B">
-<!ENTITY blockusers.label "Block Users (separated by semicolons)">
+<!ENTITY blockusers.label "Block Links From Users (separated by semicolons)">
 <!ENTITY blockusers.accesskey "U">
 <!ENTITY blockdomains.label "Block Domains (separated by semicolons)">
 <!ENTITY blockdomains.accesskey "D">
@@ -17,3 +17,6 @@
 <!ENTITY hiderecentbox.label "RECENTLY VIEWED LINKS box">
 <!ENTITY hidesubredditbar.label "Subreddit bar">
 <!ENTITY hidesearchbox.label "Search box">
+<!ENTITY hideinfobox.label "Info box">
+<!ENTITY userunity.label "Use the Links List to Block Comments">
+<!ENTITY blockcommentusers.label "Block Comments From Users (separated by semicolons)">
