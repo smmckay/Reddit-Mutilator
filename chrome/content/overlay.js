@@ -8,6 +8,16 @@ var redditmutilator = {
     this.prefs       = Components.classes["@mozilla.org/preferences-service;1"]
                                  .getService(Components.interfaces.nsIPrefService)
                                  .getBranch("extensions.redditmutilator.");
+    this.hideprefs   = {"blocknsfw":  '//div[contains(@class,"over18")]',
+                        "hideshare": '//span[contains(@class,"share-button")]',
+                        "hidesave": '//form[contains(@class,"save-button")]',
+                        "hidehide": '//form[contains(@class,"hide-button")]',
+                        "hidereport": '//form[contains(@class,"report-button")]',
+                        "hidecreatebox": '//div[@class="sidebox create"]',
+                        "hidesubmitbox": '//div[@class="sidebox submit"]',
+                        "hidemodbox": '//h1[text()="' + strings.getString("modBoxText") + '"]/..',
+                        "hiderecentbox": '//h1[text()="' + strings.getString("recentBoxText") + '"]/..',
+                        "hidesubredditbar": '//div[@id="sr-header-area"]'};
     this.boolprefs   = ["blocknsfw",
                         "hideshare",
                         "hidesave",
@@ -16,7 +26,8 @@ var redditmutilator = {
                         "hidecreatebox",
                         "hidesubmitbox",
                         "hidemodbox",
-                        "hiderecentbox"];
+                        "hiderecentbox",
+                        "hidesubredditbar"];
     this.listprefs   = ["blockusers", "blockdomains"];
     this.url_regex   = new RegExp("^http://www.reddit.com(/+r/+[^/]+)?/*[^/]*$");
 
@@ -87,11 +98,16 @@ var redditmutilator = {
   },
 
   filterPage: function(doc) {
-    boolprefs.forEach(function(elem) {
-        if(prefs.getBoolPref(elem)) {
-            redditmutilator[elem](doc);
+    //boolprefs.forEach(function(elem) {
+    //    if(prefs.getBoolPref(elem)) {
+    //        redditmutilator[elem](doc);
+    //    }
+    //});
+    for(var i in hideprefs) {
+        if(prefs.getBoolPref(i)) {
+            redditmutilator.hideElements(doc, hideprefs[i]);
         }
-    });
+    }
 
     listprefs.forEach(function(elem) {
         var items = redditmutilator.unpackListPref(elem);
@@ -177,6 +193,10 @@ var redditmutilator = {
 
   hiderecentbox: function(doc) {
       this.hideElements(doc, '//h1[text()="' + strings.getString("recentBoxText") + '"]/..');
+  },
+
+  hidesubredditbar: function(doc) {
+      this.hideElements(doc, '//div[@id="sr-header-area"]');
   }
 };
 

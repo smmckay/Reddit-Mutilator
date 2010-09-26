@@ -15,20 +15,34 @@
       <preference id="hidesubmitboxpref" name="extensions.redditmutilator.hidesubmitbox" type="bool"/>
       <preference id="hidemodboxpref" name="extensions.redditmutilator.hidemodbox" type="bool"/>
       <preference id="hiderecentboxpref" name="extensions.redditmutilator.hiderecentbox" type="bool"/>
+      <preference id="hidesubredditbarpref" name="extensions.redditmutilator.hidesubredditbar" type="bool"/>
     </preferences>
-    <checkbox id="blocknsfwbox" preference="blocknsfwpref" label="&blocknsfw.label;" accesskey="&blocknsfw.accesskey;"/>
-    <label accesskey="&blockusers.accesskey;" control="blockusersbox">&blockusers.label;</label><textbox id="blockusersbox" preference="blockuserspref"/>
-    <label accesskey="&blockdomains.accesskey;" control="blockdomainsbox">&blockdomains.label;</label><textbox id="blockdomainsbox" preference="blockdomainspref"/>
-    <groupbox>
-        <caption label="&hidegroupbox.label;" />
-        <checkbox id="hidesharebox" preference="hidesharepref" label="&hideshare.label;" />
-        <checkbox id="hidesavebox" preference="hidesavepref" label="&hidesave.label;" />
-        <checkbox id="hidehidebox" preference="hidehidepref" label="&hidehide.label;" />
-        <checkbox id="hidereportbox" preference="hidereportpref" label="&hidereport.label;" />
-        <checkbox id="hidecreateboxbox" preference="hidecreateboxpref" label="&hidecreatebox.label;" />
-        <checkbox id="hidesubmitboxbox" preference="hidesubmitboxpref" label="&hidesubmitbox.label;" />
-        <checkbox id="hidemodboxbox" preference="hidemodboxpref" label="&hidemodbox.label;" />
-        <checkbox id="hiderecentboxbox" preference="hiderecentboxpref" label="&hiderecentbox.label;" />
-    </groupbox>
+    <tabbox id="optionTabs" selectedIndex="0">
+      <tabs>
+        <tab label="Link pages"/>
+        <tab label="Comment pages"/>
+      </tabs>
+      <tabpanels>
+        <vbox>
+          <checkbox id="blocknsfwbox" preference="blocknsfwpref" label="&blocknsfw.label;" accesskey="&blocknsfw.accesskey;"/>
+          <label accesskey="&blockusers.accesskey;" control="blockusersbox">&blockusers.label;</label><textbox id="blockusersbox" preference="blockuserspref"/>
+          <label accesskey="&blockdomains.accesskey;" control="blockdomainsbox">&blockdomains.label;</label><textbox id="blockdomainsbox" preference="blockdomainspref"/>
+          <groupbox>
+            <caption label="&hidegroupbox.label;" />
+            <checkbox id="hidesharebox" preference="hidesharepref" label="&hideshare.label;" />
+            <checkbox id="hidesavebox" preference="hidesavepref" label="&hidesave.label;" />
+            <checkbox id="hidehidebox" preference="hidehidepref" label="&hidehide.label;" />
+            <checkbox id="hidereportbox" preference="hidereportpref" label="&hidereport.label;" />
+            <checkbox id="hidecreateboxbox" preference="hidecreateboxpref" label="&hidecreatebox.label;" />
+            <checkbox id="hidesubmitboxbox" preference="hidesubmitboxpref" label="&hidesubmitbox.label;" />
+            <checkbox id="hidemodboxbox" preference="hidemodboxpref" label="&hidemodbox.label;" />
+            <checkbox id="hiderecentboxbox" preference="hiderecentboxpref" label="&hiderecentbox.label;" />
+            <checkbox id="hidesubredditbarbox" preference="hidesubredditbarpref" label="&hidesubredditbar.label;" />
+          </groupbox>
+        </vbox>
+        <vbox>
+        </vbox>
+      </tabpanels>
+    </tabbox>
   </prefpane>
 </prefwindow>

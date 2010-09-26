@@ -15,3 +15,4 @@
 <!ENTITY hidesubmitbox.label "&quot;Submit a link&quot; box">
 <!ENTITY hidemodbox.label "MODERATORS box">
 <!ENTITY hiderecentbox.label "RECENTLY VIEWED LINKS box">
+<!ENTITY hidesubredditbar.label "Subreddit bar">
