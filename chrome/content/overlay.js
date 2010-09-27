@@ -115,8 +115,9 @@ filterLinksPage: function(doc) {
         var current_subreddit  = whitelist_regex.exec(doc.location.href)[1];
         if(allowed_subreddits.indexOf(current_subreddit) == -1) {
             var body = doc.getElementById("header").parentNode;
-            for(var i in body.childNodes) {
-               body.childNodes[i].style.display = 'none';
+            var body_children = body.childNodes;
+            for(var i = 0; i < body_children.length; i++) {
+                body_children.item(i).style.display = "none";
             }
             var div = doc.createElement("div");
             div.innerHTML = "<h1>Reddit Mutilator has been configured to block this subreddit.</h1>" +
