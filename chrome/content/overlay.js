@@ -110,7 +110,7 @@ onMenuItemCommand: function(e) {
 },
 
 filterLinksPage: function(doc) {
-    if(!prefs.getBoolPref("whitelistsubreddits")) {
+    if(!prefs.getBoolPref("whitelistsubreddits") && doc.location.href != "http://www.reddit.com/") {
         var allowed_subreddits = redditmutilator.unpackListPref("whitelistedsubreddits");
         var current_subreddit  = whitelist_regex.exec(doc.location.href)[1];
         if(allowed_subreddits.indexOf(current_subreddit) == -1) {
