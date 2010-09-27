@@ -14,6 +14,8 @@ pref("extensions.redditmutilator.hidesearchbox", false);
 pref("extensions.redditmutilator.userunity", true);
 pref("extensions.redditmutilator.blockcommentusers", "");
 pref("extensions.redditmutilator.hideinfobox", false);
+pref("extensions.redditmutilator.whitelistsubreddits", true);
+pref("extensions.redditmutilator.whitelistedsubreddits", "");
 
 // https://developer.mozilla.org/en/Localizing_extension_descriptions
 pref("extensions.{a00b4d87-e032-49c0-ba21-abbe079b51ae}.description", "chrome://redditmutilator/locale/overlay.properties");

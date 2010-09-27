@@ -23,6 +23,7 @@ onLoad: function() {
     this.listprefs         = ["blockusers", "blockdomains"];
     this.links_regex       = new RegExp("^http://www.reddit.com(/+r/+[^/]+)?/*[^/]*$");
     this.comments_regex    = new RegExp("^http://www.reddit.com/+r/+[^/]+/+comments");
+    this.whitelist_regex   = new RegExp("^http://www.reddit.com/+r/+([^/]+)");
 
     document.getElementById("contentAreaContextMenu")
             .addEventListener("popupshowing", redditmutilator.showContextMenu, false);
@@ -105,10 +106,25 @@ onMenuItemCommand: function(e) {
     var promptService = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
                                   .getService(Components.interfaces.nsIPromptService);
     promptService.alert(window, strings.getString("helloMessageTitle"),
-    strings.getString("helloMessage"));
+                                strings.getString("helloMessage"));
 },
 
 filterLinksPage: function(doc) {
+    if(!prefs.getBoolPref("whitelistsubreddits")) {
+        var allowed_subreddits = redditmutilator.unpackListPref("whitelistedsubreddits");
+        var current_subreddit  = whitelist_regex.exec(doc.location.href)[1];
+        if(allowed_subreddits.indexOf(current_subreddit) == -1) {
+            var body = doc.getElementById("header").parentNode;
+            for(var i in body.childNodes) {
+               body.childNodes[i].style.display = 'none';
+            }
+            var div = doc.createElement("div");
+            div.innerHTML = "<h1>Reddit Mutilator has been configured to block this subreddit.</h1>" +
+                            "<p>To change subreddit whitelisting, go to Tools->Add-ons->Reddit Mutilator->Options->Content Blocking</p>";
+            body.appendChild(div);
+            return;
+        }
+    }
     for(var i in hideprefs) {
         if(prefs.getBoolPref(i)) {
             redditmutilator.hideElements(doc, hideprefs[i]);

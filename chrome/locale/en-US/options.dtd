@@ -20,3 +20,5 @@
 <!ENTITY hideinfobox.label "Info box">
 <!ENTITY userunity.label "Use the Links List to Block Comments">
 <!ENTITY blockcommentusers.label "Block Comments From Users (separated by semicolons)">
+<!ENTITY whitelistsubreddits.label "Disable Subreddit Whitelisting">
+<!ENTITY whitelistedsubreddits.label "Whitelisted Subreddits (separated by semicolons)">

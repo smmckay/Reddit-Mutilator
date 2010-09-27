@@ -21,6 +21,8 @@
       <preference id="userunitypref" name="extensions.redditmutilator.userunity" type="bool"/>
       <preference id="blockcommentuserspref" name="extensions.redditmutilator.blockcommentusers" type="unichar"/>
       <preference id="hideinfoboxpref" name="extensions.redditmutilator.hideinfobox" type="bool"/>
+      <preference id="whitelistsubredditspref" name="extensions.redditmutilator.whitelistsubreddits" type="bool"/>
+      <preference id="whitelistedsubredditspref" name="extensions.redditmutilator.whitelistedsubreddits" type="unichar"/>
     </preferences>
     <tabbox id="optionTabs" selectedIndex="0">
       <tabs>
@@ -34,6 +36,8 @@
           <label accesskey="&blockdomains.accesskey;" control="blockdomainsbox">&blockdomains.label;</label><textbox id="blockdomainsbox" preference="blockdomainspref"/>
           <checkbox id="userunitybox" preference="userunitypref" label="&userunity.label;"/>
           <label control="blockcommentusersbox">&blockcommentusers.label;</label><textbox id="blockcommentusersbox" preference="blockcommentuserspref"/>
+          <checkbox id="whitelistsubredditsbox" preference="whitelistsubredditspref" label="&whitelistsubreddits.label;"/>
+          <label control="whitelistedsubredditsbox">&whitelistedsubreddits.label;</label><textbox id="whitelistedsubredditsbox" preference="whitelistedsubredditspref"/>
         </vbox>
         <vbox>
           <groupbox>
