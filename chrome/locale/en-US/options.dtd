@@ -17,8 +17,10 @@
 <!ENTITY hiderecentbox.label "RECENTLY VIEWED LINKS box">
 <!ENTITY hidesubredditbar.label "Subreddit bar">
 <!ENTITY hidesearchbox.label "Search box">
-<!ENTITY hideinfobox.label "Info box">
+<!ENTITY hideinfobox.label "Comments page link info box">
 <!ENTITY userunity.label "Use the Links List to Block Comments">
 <!ENTITY blockcommentusers.label "Block Comments From Users (separated by semicolons)">
 <!ENTITY whitelistsubreddits.label "Disable Subreddit Whitelisting">
 <!ENTITY whitelistedsubreddits.label "Whitelisted Subreddits (separated by semicolons)">
+<!ENTITY contentblocking.label "Content Blocking">
+<!ENTITY elementremoval.label "Element Removal">

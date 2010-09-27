@@ -26,8 +26,8 @@
     </preferences>
     <tabbox id="optionTabs" selectedIndex="0">
       <tabs>
-        <tab label="Content blocking"/>
-        <tab label="Element removal"/>
+        <tab label="&contentblocking.label;"/>
+        <tab label="&elementremoval.label;"/>
       </tabs>
       <tabpanels>
         <vbox>
