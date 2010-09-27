@@ -21,7 +21,7 @@ onLoad: function() {
                               "hidesearchbox": '//form[@id="search"]/..',
                               "hideinfobox": '//div[@class="linkinfo"]/..'};
     this.listprefs         = ["blockusers", "blockdomains"];
-    this.links_regex       = new RegExp("^http://www.reddit.com(/+r/+[^/]+)?/*[^/]*$");
+    this.links_regex       = new RegExp("^http://www.reddit.com(/+r/+[^/]+)?(/+(controversial|top|new|saved))?/*[^/]*$");
     this.comments_regex    = new RegExp("^http://www.reddit.com/+r/+[^/]+/+comments");
     this.whitelist_regex   = new RegExp("^http://www.reddit.com/+r/+([^/]+)");
 
@@ -110,7 +110,8 @@ onMenuItemCommand: function(e) {
 },
 
 filterLinksPage: function(doc) {
-    if(!prefs.getBoolPref("whitelistsubreddits") && doc.location.href != "http://www.reddit.com/") {
+    if(!prefs.getBoolPref("whitelistsubreddits") &&
+       !doc.location.href.match("^http://www.reddit.com/+(controversial|new|top|saved)?/*$")) {
         var allowed_subreddits = redditmutilator.unpackListPref("whitelistedsubreddits");
         var current_subreddit  = whitelist_regex.exec(doc.location.href)[1];
         if(allowed_subreddits.indexOf(current_subreddit) == -1) {
