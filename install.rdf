@@ -4,7 +4,7 @@
     <em:id>{a00b4d87-e032-49c0-ba21-abbe079b51ae}</em:id>
     <em:type>2</em:type>
     <em:name>Reddit Mutilator</em:name>
-    <em:version>0.2.1</em:version>
+    <em:version>0.2.2</em:version>
     <em:creator>Steve McKay</em:creator>
     <em:contributor></em:contributor>
     <em:aboutURL>chrome://redditmutilator/content/about.xul</em:aboutURL>
